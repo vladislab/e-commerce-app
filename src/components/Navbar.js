@@ -3,7 +3,9 @@ import "./header.styles.scss";
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./crown.svg";
 
-export default function Navbar() {
+import { auth } from "../firebase/firebase.utils";
+
+export default function Navbar({ currentUser }) {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -17,9 +19,15 @@ export default function Navbar() {
         <NavLink to="/contact" className="option" activeClassName="active">
           CONTACT
         </NavLink>
-        <NavLink to="/signIn" className="option" activeClassName="active">
-          SIGN IN
-        </NavLink>
+        {currentUser === null ? (
+          <Link to="/signIn" className="option">
+            SIGN IN
+          </Link>
+        ) : (
+          <div className="option" onClick={() => auth.signOut()}>
+            SIGN OUT
+          </div>
+        )}
         <NavLink to="/cart" className="option" activeClassName="active">
           CART
         </NavLink>
