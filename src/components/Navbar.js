@@ -17,7 +17,7 @@ export default function Navbar() {
         <NavLink to="/contact" className="option" activeClassName="active">
           CONTACT
         </NavLink>
-        <NavLink to="/signin" className="option" activeClassName="active">
+        <NavLink to="/signIn" className="option" activeClassName="active">
           SIGN IN
         </NavLink>
         <NavLink to="/cart" className="option" activeClassName="active">

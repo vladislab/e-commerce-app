@@ -8,6 +8,7 @@ import SneakersPage from "../pages/SneakersPage";
 import WomensPage from "../pages/WomensPage";
 import MensPage from "../pages/MensPage";
 import ShopPage from "../pages/ShopPage";
+import SignInUpPage from "../pages/SignInUpPage";
 
 export default function Routes() {
   return (
@@ -20,6 +21,7 @@ export default function Routes() {
         <Route exact path="/shop/sneakers" component={SneakersPage} />
         <Route exact path="/shop/womens" component={WomensPage} />
         <Route exact path="/shop/mens" component={MensPage} />
+        <Route exact path="/signIn" component={SignInUpPage} />
       </Switch>
     </div>
   );
