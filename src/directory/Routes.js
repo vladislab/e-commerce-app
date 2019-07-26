@@ -1,4 +1,5 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
 import React from "react";
 import HomePage from "../pages/HomePage";
@@ -10,7 +11,7 @@ import MensPage from "../pages/MensPage";
 import ShopPage from "../pages/ShopPage";
 import SignInUpPage from "../pages/SignInUpPage";
 
-export default function Routes() {
+function Routes({ currentUser }) {
   return (
     <div>
       <Switch>
@@ -21,8 +22,16 @@ export default function Routes() {
         <Route exact path="/shop/sneakers" component={SneakersPage} />
         <Route exact path="/shop/womens" component={WomensPage} />
         <Route exact path="/shop/mens" component={MensPage} />
-        <Route exact path="/signIn" component={SignInUpPage} />
+        <Route
+          exact
+          path="/signIn"
+          render={() => (currentUser ? <Redirect to="/" /> : <SignInUpPage />)}
+        />
       </Switch>
     </div>
   );
 }
+const mapStateToProps = state => {
+  return { currentUser: state.user.currentUser };
+};
+export default connect(mapStateToProps)(Routes);
