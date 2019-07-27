@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 
 import { auth } from "../firebase/firebase.utils";
 import CartIcon from "./CartIcon";
+import CartDropdown from "./CartDropdown";
 
 function Navbar({ currentUser }) {
   return (
@@ -32,6 +33,7 @@ function Navbar({ currentUser }) {
         )}
         <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 }
