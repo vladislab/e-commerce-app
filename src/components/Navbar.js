@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "./crown.svg";
 import { connect } from "react-redux";
 
 import { auth } from "../firebase/firebase.utils";
+import CartIcon from "./CartIcon";
 
 function Navbar({ currentUser }) {
   return (
@@ -29,9 +30,7 @@ function Navbar({ currentUser }) {
             SIGN OUT
           </div>
         )}
-        <NavLink to="/cart" className="option" activeClassName="active">
-          CART
-        </NavLink>
+        <CartIcon />
       </div>
     </div>
   );
