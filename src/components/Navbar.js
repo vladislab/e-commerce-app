@@ -8,7 +8,7 @@ import { auth } from "../firebase/firebase.utils";
 import CartIcon from "./CartIcon";
 import CartDropdown from "./CartDropdown";
 
-function Navbar({ currentUser, cartHidden }) {
+function Navbar({ currentUser, cartHidden, cartItems }) {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -33,12 +33,16 @@ function Navbar({ currentUser, cartHidden }) {
         )}
         <CartIcon />
       </div>
-      {cartHidden ? null : <CartDropdown />}
+      {cartHidden ? null : <CartDropdown items={cartItems} />}
     </div>
   );
 }
 
 const mapStateToProps = state => {
-  return { currentUser: state.user.currentUser, cartHidden: state.cart.hidden };
+  return {
+    currentUser: state.user.currentUser,
+    cartHidden: state.cart.hidden,
+    cartItems: state.cart.cartItems
+  };
 };
 export default connect(mapStateToProps)(Navbar);
