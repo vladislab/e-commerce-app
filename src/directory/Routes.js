@@ -1,5 +1,7 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
+import { selectCurrentUser } from "../redux/user/user.selectors";
+import { createStructuredSelector } from "reselect";
 
 import React from "react";
 import HomePage from "../pages/HomePage";
@@ -31,7 +33,8 @@ function Routes({ currentUser }) {
     </div>
   );
 }
-const mapStateToProps = state => {
-  return { currentUser: state.user.currentUser };
-};
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
 export default connect(mapStateToProps)(Routes);
