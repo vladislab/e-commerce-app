@@ -3,7 +3,7 @@ import "./header.styles.scss";
 import { NavLink, Link } from "react-router-dom";
 import { ReactComponent as Logo } from "./crown.svg";
 import { connect } from "react-redux";
-
+import { selectCartItems } from "../redux/cart/cart.selectors";
 import { auth } from "../firebase/firebase.utils";
 import CartIcon from "./CartIcon";
 import CartDropdown from "./CartDropdown";
@@ -42,7 +42,7 @@ const mapStateToProps = state => {
   return {
     currentUser: state.user.currentUser,
     cartHidden: state.cart.hidden,
-    cartItems: state.cart.cartItems
+    cartItems: selectCartItems(state)
   };
 };
 export default connect(mapStateToProps)(Navbar);
