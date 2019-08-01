@@ -11,21 +11,23 @@ function CollectionPage({ collection }) {
   console.log(collection);
   return (
     <div className="collection-page">
-      <div className="title">Our collections:</div>
+      <div className="title">{collection.title}</div>
       <div className="items">
-        <CollectionItem />
+        {collection.items.map(item => (
+          <CollectionItem {...item} key={item.id} />
+        ))}
       </div>
     </div>
   );
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  collection: selectCollection(ownProps.match.params.collectionId)(state)
-});
+// const mapStateToProps = (state, ownProps) => ({
+//   collection: selectCollection(ownProps.match.params.collectionId)(state)
+// });
 
-// const mapStateToProps = (state, ownProps) =>
-//   createStructuredSelector({
-//     collection: selectCollection(ownProps.match.params.collectionId)
-//   });
+const mapStateToProps = (state, ownProps) =>
+  createStructuredSelector({
+    collection: selectCollection(ownProps.match.params.collectionId)
+  });
 
 export default connect(mapStateToProps)(CollectionPage);
