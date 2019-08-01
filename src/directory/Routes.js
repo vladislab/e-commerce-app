@@ -21,11 +21,11 @@ function Routes({ currentUser }) {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={ShopPage} />
         <Route exact path="/checkout" component={Checkout} />
-        <Route exact path="/shop/hats" component={HatsPage} />
+        {/* <Route exact path="/shop/hats" component={HatsPage} />
         <Route exact path="/shop/jackets" component={JacketsPage} />
         <Route exact path="/shop/sneakers" component={SneakersPage} />
         <Route exact path="/shop/womens" component={WomensPage} />
-        <Route exact path="/shop/mens" component={MensPage} />
+        <Route exact path="/shop/mens" component={MensPage} /> */}
         <Route
           exact
           path="/signIn"

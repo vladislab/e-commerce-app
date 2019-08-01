@@ -6,3 +6,10 @@ export const selectShopCollections = createSelector(
   [selectShop],
   shop => shop.collections
 );
+
+export const selectCollection = collectionId =>
+  createSelector(
+    [selectShopCollections],
+    collections =>
+      collections.find(collection => collection.routeName === collectionId)
+  );
