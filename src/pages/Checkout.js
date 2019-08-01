@@ -27,7 +27,7 @@ function Checkout({ cartItems, totalPrice }) {
         </div>
       </div>
       {cartItems.map(cartItems => (
-        <CheckoutItem {...cartItems} key={cartItems.id} />
+        <CheckoutItem cartItem={cartItems} key={cartItems.id} />
       ))}
       <div className="total">
         <span>Total: ${totalPrice}</span>
