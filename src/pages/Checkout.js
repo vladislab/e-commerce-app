@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import { selectCartItems, selectCartTotal } from "../redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
+import CheckoutItem from "../components/CheckoutItem";
 
 function Checkout({ cartItems, totalPrice }) {
   return (
@@ -25,7 +26,9 @@ function Checkout({ cartItems, totalPrice }) {
           <span>Remove</span>
         </div>
       </div>
-      {cartItems.map(cartItems => cartItems.name)}
+      {cartItems.map(cartItems => (
+        <CheckoutItem {...cartItems} key={cartItems.id} />
+      ))}
       <div className="total">
         <span>Total: ${totalPrice}</span>
       </div>
