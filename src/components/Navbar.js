@@ -16,27 +16,27 @@ import CartDropdown from "./CartDropdown";
 function Navbar({ currentUser, cartHidden, cartItems }) {
   return (
     <div className="header">
-      <Link className="logo-container" to="/e-commerce-app">
+      <Link className="logo-container" to="/e-commerce-app/">
         <Logo className="logo" />
       </Link>
 
       <div className="options">
         <NavLink
-          to="/e-commerce-app/shop"
+          to="/e-commerce-app/shop/"
           className="option"
           activeClassName="active"
         >
           SHOP
         </NavLink>
         <NavLink
-          to="/e-commerce-app/contact"
+          to="/e-commerce-app/contact/"
           className="option"
           activeClassName="active"
         >
           CONTACT
         </NavLink>
         {currentUser === null ? (
-          <Link to="/e-commerce-app/signIn" className="option">
+          <Link to="/e-commerce-app/signIn/" className="option">
             SIGN IN
           </Link>
         ) : (

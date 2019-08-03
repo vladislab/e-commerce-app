@@ -19,7 +19,7 @@ function CartDropdown({ items, history, dispatch }) {
       </div>
       <CustomButton
         onClick={() => {
-          history.push("/checkout");
+          history.push("/e-commerce-app/checkout");
           dispatch(toggleCartDropdown());
         }}
       >
