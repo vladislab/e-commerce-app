@@ -16,19 +16,27 @@ import CartDropdown from "./CartDropdown";
 function Navbar({ currentUser, cartHidden, cartItems }) {
   return (
     <div className="header">
-      <Link className="logo-container" to="/">
+      <Link className="logo-container" to={process.env.PUBLIC_URL + "/"}>
         <Logo className="logo" />
       </Link>
 
       <div className="options">
-        <NavLink to="/shop" className="option" activeClassName="active">
+        <NavLink
+          to={process.env.PUBLIC_URL + "/shop"}
+          className="option"
+          activeClassName="active"
+        >
           SHOP
         </NavLink>
-        <NavLink to="/contact" className="option" activeClassName="active">
+        <NavLink
+          to={process.env.PUBLIC_URL + "/contact"}
+          className="option"
+          activeClassName="active"
+        >
           CONTACT
         </NavLink>
         {currentUser === null ? (
-          <Link to="/signIn" className="option">
+          <Link to={process.env.PUBLIC_URL + "/signIn"} className="option">
             SIGN IN
           </Link>
         ) : (
