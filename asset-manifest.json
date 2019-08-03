@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/e-commerce-app/static/css/main.dea91328.chunk.css",
-    "main.js": "/e-commerce-app/static/js/main.a486adc3.chunk.js",
-    "main.js.map": "/e-commerce-app/static/js/main.a486adc3.chunk.js.map",
+    "main.js": "/e-commerce-app/static/js/main.052bcc10.chunk.js",
+    "main.js.map": "/e-commerce-app/static/js/main.052bcc10.chunk.js.map",
     "runtime~main.js": "/e-commerce-app/static/js/runtime~main.552b0c5d.js",
     "runtime~main.js.map": "/e-commerce-app/static/js/runtime~main.552b0c5d.js.map",
     "static/js/2.42ea8ce6.chunk.js": "/e-commerce-app/static/js/2.42ea8ce6.chunk.js",
     "static/js/2.42ea8ce6.chunk.js.map": "/e-commerce-app/static/js/2.42ea8ce6.chunk.js.map",
     "index.html": "/e-commerce-app/index.html",
-    "precache-manifest.037843f990126127e716a9c5525ad9be.js": "/e-commerce-app/precache-manifest.037843f990126127e716a9c5525ad9be.js",
+    "precache-manifest.fb8b3cf48fc9b18fb9ca9880d7623e87.js": "/e-commerce-app/precache-manifest.fb8b3cf48fc9b18fb9ca9880d7623e87.js",
     "service-worker.js": "/e-commerce-app/service-worker.js",
     "static/css/main.dea91328.chunk.css.map": "/e-commerce-app/static/css/main.dea91328.chunk.css.map",
     "static/media/crown.ed28accb.svg": "/e-commerce-app/static/media/crown.ed28accb.svg",
