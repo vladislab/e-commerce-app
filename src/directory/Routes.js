@@ -13,13 +13,23 @@ function Routes({ currentUser }) {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route exact path="/checkout" component={Checkout} />
+        <Route exact path={process.env.PUBLIC_URL + "/"} component={HomePage} />
+        <Route path={process.env.PUBLIC_URL + "/shop"} component={ShopPage} />
         <Route
           exact
-          path="/signIn"
-          render={() => (currentUser ? <Redirect to="/" /> : <SignInUpPage />)}
+          path={process.env.PUBLIC_URL + "/checkout"}
+          component={Checkout}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + "/signIn"}
+          render={() =>
+            currentUser ? (
+              <Redirect to={process.env.PUBLIC_URL + "/"} />
+            ) : (
+              <SignInUpPage />
+            )
+          }
         />
       </Switch>
     </div>
