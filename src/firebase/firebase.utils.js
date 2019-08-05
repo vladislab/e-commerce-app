@@ -56,7 +56,7 @@ export const addCollectionAndDocuments = async (
   return await batch.commit(); //A Promise which returns a void value if succeed.
 };
 
-//Takes a snapshot query from Firebase and return an array of its docs property
+//Takes a snapshot query from Firebase and return an object containing the docs property of the snapshot
 export const convertCollectionsSnapshotToMap = snapshot => {
   const transformedCollection = snapshot.docs.map(document => {
     const { title, items } = document.data();
@@ -67,7 +67,10 @@ export const convertCollectionsSnapshotToMap = snapshot => {
       items
     };
   });
-  return transformedCollection;
+  return transformedCollection.reduce((acc, collection) => {
+    acc[collection.title.toLowerCase()] = collection;
+    return acc;
+  }, {});
 };
 
 firebase.initializeApp(firebaseConfig);
