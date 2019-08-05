@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c5c3c405f354e65725da1210e66c12d",
+    "revision": "6a09779daf436868b3433dd43533ad80",
     "url": "/e-commerce-app/index.html"
   },
   {
-    "revision": "5bcaa9ce2f8c2df0c64d",
-    "url": "/e-commerce-app/static/css/main.dea91328.chunk.css"
+    "revision": "361cc8386c20657aa2a5",
+    "url": "/e-commerce-app/static/css/main.fc608f4e.chunk.css"
   },
   {
     "revision": "7793ad0702813311eab9",
     "url": "/e-commerce-app/static/js/2.42ea8ce6.chunk.js"
   },
   {
-    "revision": "5bcaa9ce2f8c2df0c64d",
-    "url": "/e-commerce-app/static/js/main.052bcc10.chunk.js"
+    "revision": "361cc8386c20657aa2a5",
+    "url": "/e-commerce-app/static/js/main.67d00a15.chunk.js"
   },
   {
     "revision": "632a788f4bd551d79aae",
     "url": "/e-commerce-app/static/js/runtime~main.552b0c5d.js"
   },
   {
-    "revision": "ed28accb7dd58a0469bff983503ff07e",
-    "url": "/e-commerce-app/static/media/crown.ed28accb.svg"
+    "revision": "19ef7b17bc9414c63c7781251ce0d24d",
+    "url": "/e-commerce-app/static/media/crown.19ef7b17.svg"
   },
   {
     "revision": "30f0707118fb960665491424c115ac44",
