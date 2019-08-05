@@ -8,7 +8,6 @@ import "./collection.styles.scss";
 import { createStructuredSelector } from "reselect";
 
 function CollectionPage({ collection }) {
-  console.log(collection);
   return (
     <div className="collection-page">
       <div className="title">{collection.title}</div>
