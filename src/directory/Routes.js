@@ -18,6 +18,11 @@ function Routes({ currentUser }) {
         <Route exact path={"/e-commerce-app/checkout"} component={Checkout} />
         <Route
           exact
+          path={"/e-commerce-app/contact"}
+          render={() => <h2>Page under construction!</h2>}
+        />
+        <Route
+          exact
           path={"/e-commerce-app/signIn"}
           render={() =>
             currentUser ? <Redirect to={"/e-commerce-app"} /> : <SignInUpPage />
