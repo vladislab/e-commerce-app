@@ -6,11 +6,15 @@ import { createStructuredSelector } from "reselect";
 import CollectionsPreview from "./CollectionsPreview";
 import "./collections-overview.styles.scss";
 
-function CollectionsOverview({ collections }) {
+function CollectionsOverview({ collections, ...otherProps }) {
   return (
     <div className="collections-overview">
       {collections.map(collection => (
-        <CollectionsPreview key={collection.id} {...collection} />
+        <CollectionsPreview
+          key={collection.id}
+          {...collection}
+          {...otherProps}
+        />
       ))}
     </div>
   );
